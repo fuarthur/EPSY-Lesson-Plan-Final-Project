@@ -35,7 +35,7 @@ export const lesson02: Lesson = {
         correct: "Yes"
       },
       rationale:
-        "Uses **Anchored Instruction** by grounding abstract boolean logic in a familiar, story-based context that students can easily reason about."
+        "Uses **Attention** to focus students on the relevant decision cues in each example (age, ticket, shoes, shirt), and builds structured **Decision Making** by having students apply AND/OR rules to make clear yes/no entry decisions."
     },
     {
       title: "Concept Lesson: Conditionals and Flowcharts",
@@ -51,7 +51,7 @@ export const lesson02: Lesson = {
         "Students copy the example conditional and flowchart into their notes, then brainstorm their own conditional ideas based on everyday decisions.",
       interactiveComponent: "none",
       rationale:
-        "Using clear visuals and step-by-step modeling supports **Working Memory** by reducing cognitive load and helping students track each branch of the decision."
+        "Supports **Attention** with clean, highly visual flowcharts that highlight the current decision point, and strengthens **Decision Making** by making the IF/ELSE logic explicit (condition → outcome) at each branch."
     },
     {
       title: "Activity: Logic Puzzles and Decision Trees",
@@ -76,7 +76,7 @@ export const lesson02: Lesson = {
           + "  Wear a T-shirt\n"
       },
       rationale:
-        "**Cooperative Learning** lets students talk through their reasoning with a partner, strengthening understanding of boolean rules while staying within their **Working Memory** limits."
+        "Promotes **Near Transfer** by moving from the club-entry examples to similar everyday rule systems (weather, dress code, school policies) that still use AND/OR/NOT logic, while partners keep **Attention** on the key conditions by explaining where each branch belongs."
     },
     {
       title: "Wrap Up: From Clubs to Code and Math",
@@ -90,29 +90,33 @@ export const lesson02: Lesson = {
         "Students share examples of how boolean rules appear in everyday life, computing, and math, then respond to the final check-for-understanding question.",
       interactiveComponent: "none",
       rationale:
-        "Highlights **Transfer** by showing how logical operators learned in a story context also apply to programming and algebraic inequalities."
+        "Encourages **Far Transfer** by connecting boolean operators to unfamiliar academic contexts (algebraic inequalities and programming conditionals), and reinforces **Decision Making** by requiring students to justify which operator matches a given rule."
     }
   ],
   edPsychNotes: [
     {
-      concept: "Anchored Instruction",
-      explanation: "The 'Club Bouncer' story anchors abstract boolean logic in a concrete, engaging scenario.",
-      chapterRef: "(Ch. 9: Complex Cognition)"
+      concept: "Attention",
+      explanation:
+        "The lesson uses clear visuals, polls, and story-based examples to focus students’ attention on relevant decision cues while minimizing distractions.",
+      chapterRef: "(Chapter 8: The Information-Processing Approach)"
     },
     {
-      concept: "Cooperative Learning",
-      explanation: "Pair work on logic puzzles encourages students to explain and negotiate their thinking with peers.",
-      chapterRef: "(Ch. 10: Social Constructivism)"
+      concept: "Decision Making",
+      explanation:
+        "Students practice structured decision making by evaluating conditions and outcomes using AND, OR, and NOT rules.",
+      chapterRef: "(Chapter 9: Complex Cognitive Processes)"
     },
     {
-      concept: "Working Memory",
-      explanation: "Visual flowcharts and step-by-step modeling reduce cognitive load so students can focus on the new symbols AND, OR, and NOT.",
-      chapterRef: "(Ch. 8: Information Processing)"
+      concept: "Near Transfer",
+      explanation:
+        "Applying boolean logic from the club scenario to similar everyday rules supports near transfer of learning.",
+      chapterRef: "(Chapter 9: Complex Cognitive Processes)"
     },
     {
-      concept: "Transfer",
-      explanation: "The wrap-up explicitly connects boolean operators to mathematical inequalities and real-world decision making.",
-      chapterRef: "(Ch. 9: Transfer of Learning)"
+      concept: "Far Transfer",
+      explanation:
+        "The wrap-up connects logical operators to programming and algebraic inequalities, encouraging far transfer to new academic domains.",
+      chapterRef: "(Chapter 9: Complex Cognitive Processes)"
     }
   ],
   formativeAssessment: [
