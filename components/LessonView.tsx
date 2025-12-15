@@ -82,8 +82,12 @@ ${lesson.edPsychNotes.map(n => `- ${n.concept}: ${n.explanation} ${n.chapterRef}
             {lesson.materials.map((mat, i) => (
               <li key={i} className="flex items-center gap-2 text-slate-700">
                 <span className="text-slate-400">□</span>
-                {mat.type === 'link' ? (
-                  <a href={mat.url} className="text-blue-600 underline hover:text-blue-800">{mat.name}</a>
+                {mat.url ? (
+                  <a href={mat.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 flex items-center gap-2">
+                    {mat.name} 
+                    <span className="text-xs text-slate-400 no-underline uppercase">({mat.type})</span>
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                  </a>
                 ) : (
                   <span>{mat.name} <span className="text-xs text-slate-400 uppercase ml-1">({mat.type})</span></span>
                 )}
@@ -114,9 +118,9 @@ ${lesson.edPsychNotes.map(n => `- ${n.concept}: ${n.explanation} ${n.chapterRef}
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h4 className="text-xs font-bold text-slate-500 uppercase mb-2">Instructor Script</h4>
-                  <p className="text-slate-700 leading-relaxed italic bg-slate-50 p-3 rounded border border-slate-100">
-                    "{step.instructorScript}"
-                  </p>
+                  <div className="text-slate-700 leading-relaxed italic bg-slate-50 p-4 rounded border border-slate-100 whitespace-pre-wrap">
+                    {step.instructorScript}
+                  </div>
                 </div>
                 <div>
                   <h4 className="text-xs font-bold text-slate-500 uppercase mb-2">Student Activity</h4>

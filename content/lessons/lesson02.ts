@@ -13,8 +13,9 @@ export const lesson02: Lesson = {
   duration: "50 minutes",
   materials: [
     { name: "Logic Gate Visualizer Tool", type: "digital" },
-    { name: "Worksheet: The Club Bouncer", type: "digital" },
-    { name: "Slide Deck: Boolean Logic and Conditionals", type: "digital" }
+    { name: "Teacher Laptop with Internet Access", type: "physical" },
+    { name: "Classroom Projector/Smartboard", type: "physical" },
+    { name: "Student Laptops/Chromebooks (1 per student)", type: "physical" }
   ],
   steps: [
     {

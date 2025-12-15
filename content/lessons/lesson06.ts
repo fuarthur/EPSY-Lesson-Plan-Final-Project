@@ -3,61 +3,112 @@ import { Lesson } from '../../types';
 export const lesson06: Lesson = {
   id: "l06",
   sequenceNumber: 6,
-  title: "Looping through Linear Equations",
+  title: "Functions as Mappings: Domain and Range",
   author: "Nathanael Seon",
-  unitSection: "Foundational Algebra",
+  unitSection: "Algebraic Foundations",
+
   objectives: [
-    "Apply iterative logic (loops) to solve linear algebraic sequences.",
-    "Create a program that generates a table of values for a linear equation (y = mx + b)."
+    "Explain a mathematical function as a mapping from domain to range.",
+    "Create and represent a simple algebraic function using mapping diagrams."
   ],
-  duration: "50 minutes",
+
+  duration: "90 minutes",
+
   materials: [
-    { name: "Python/JS Sandbox", type: "digital" },
-    { name: "Coordinate Plane Visualizer", type: "digital" }
+    { name: "Virtual Whiteboard / Drawing Tool", type: "digital", url: "https://miro.com" },
+    { name: "Teacher Laptop with Internet Access", type: "physical" },
+    { name: "Classroom Projector/Smartboard", type: "physical" },
+    { name: "Student Laptops/Chromebooks (1 per student)", type: "physical" }
   ],
+
   steps: [
     {
-      title: "Warm-up: The Lazy Mathematician",
-      duration: "10 min",
-      instructorScript: "If I want to find y for x=1 to x=100 for y=2x+1, it takes forever. Programmers are lazy (efficient). We use loops.",
-      studentActivity: "Calculate the first 3 manually.",
-      interactiveComponent: "none",
-      rationale: "**Motivation (Intrinsic)**: Showing how coding saves effort creates buy-in."
-    },
-    {
-      title: "Instruction: For Loops",
+      title: "Real-World Connection: ID Badge Analogy",
       duration: "15 min",
-      instructorScript: "Structure: Start at 0, Stop at 100, Step by 1. Inside the loop: Calculate y, Print it.",
-      studentActivity: "Read code and predict output.",
-      interactiveComponent: "none"
+      instructorScript:
+        "Introduce functions using the analogy of a school ID badge: one ID grants access to one student. Emphasize the rule of one input leading to one output.",
+      studentActivity:
+        "Students discuss how the analogy maps to mathematical inputs and outputs.",
+      interactiveComponent: "none",
+      rationale:
+        "Uses **Concrete Operational Thought** and **Analogical Transfer** to connect familiar systems to abstract concepts."
     },
     {
-      title: "Integrated Activity: Plotting the Line",
-      duration: "20 min",
-      instructorScript: "Write a loop that generates points. We will see them appear on the graph. Change the slope (m) in the code, see the graph change.",
-      studentActivity: "Code -> Visual feedback loop.",
-      interactiveComponent: "graph",
-      interactiveData: { type: "linear_interactive" },
-      rationale: "**Feedback Loops**: Immediate visual confirmation of algebraic code helps internalize the concept of slope."
+      title: "Direct Instruction & Concept Check",
+      duration: "25 min",
+      instructorScript:
+        "Define function, domain, and range. Model mapping diagrams on the whiteboard. Show examples and non-examples, then poll students to classify each.",
+      studentActivity:
+        "Students respond to polls identifying valid and invalid functions.",
+      interactiveComponent: "quiz",
+      interactiveData: {
+        question: "Which diagram represents a function?",
+        options: ["Diagram A", "Diagram B", "Diagram C"],
+        correct: "Diagram A"
+      },
+      rationale:
+        "Provides **Immediate Feedback** through **Formative Assessment**, reinforcing correct mental models."
     },
     {
-      title: "Final Unit Reflection",
-      duration: "5 min",
-      instructorScript: "How did math help us code? How did code help us understand math?",
-      studentActivity: "Group discussion.",
-      interactiveComponent: "none"
+      title: "Collaborative Function Design",
+      duration: "35 min",
+      instructorScript:
+        "Place students in small groups. Instruct them to design a function based on a real-world relationship, clearly defining inputs, outputs, and notation.",
+      studentActivity:
+        "Students collaboratively design and present a function mapping.",
+      interactiveComponent: "sandbox",
+      interactiveData: {
+        placeholder:
+          "// Example:\n// Input: hours worked\n// Output: money earned\nf(x) = 15x"
+      },
+      rationale:
+        "Encourages **Cooperative Learning** through positive interdependence and shared responsibility."
+    },
+    {
+      title: "Closing Reflection",
+      duration: "15 min",
+      instructorScript:
+        "Ask students to reflect on how the one-input-one-output rule simplifies real-world systems. Facilitate brief discussion.",
+      studentActivity:
+        "Students articulate reflections verbally or in writing.",
+      interactiveComponent: "none",
+      rationale:
+        "Supports **Metacognition** by prompting reflection on learning processes."
     }
   ],
+
   edPsychNotes: [
-    { concept: "Intrinsic Motivation", explanation: "Framing programming as a tool for efficiency appeals to desire for mastery.", chapterRef: "(Ch. 11: Motivation)" },
-    { concept: "Feedback", explanation: "Visual graph updates immediately based on code changes.", chapterRef: "(Ch. 11: Behavioral Views)" },
-    { concept: "Transfer", explanation: "Applying algebra (y=mx+b) in a completely new context (loops).", chapterRef: "(Ch. 9: Transfer)" },
-    { concept: "Cognitive Load", explanation: "Using the computer to do the calculation allows the student to focus on the pattern.", chapterRef: "(Ch. 8: Cognitive Load Theory)" }
+    {
+      concept: "**Analogical Transfer (Concrete Operational Thought)**",
+      explanation:
+        "Using familiar ID systems helps students grasp abstract functional mappings.",
+      chapterRef: "Chapter 2"
+    },
+    {
+      concept: "**Immediate Feedback & Formative Assessment**",
+      explanation:
+        "Polling reveals misconceptions in real time.",
+      chapterRef: "Chapter 7"
+    },
+    {
+      concept: "**Cooperative Learning (Positive Interdependence)**",
+      explanation:
+        "Group design tasks require shared success.",
+      chapterRef: "Chapter 10"
+    },
+    {
+      concept: "**Metacognition (Self-Regulation)**",
+      explanation:
+        "Reflection strengthens schema integration and self-monitoring.",
+      chapterRef: "Ch. 9, 13"
+    }
   ],
+
   formativeAssessment: [
     {
       type: "reflection",
-      question: "How is a For-Loop similar to a function table in math?",
+      question:
+        "Why does requiring exactly one output for each input make functions easier to model in real-world situations?"
     }
   ]
 };

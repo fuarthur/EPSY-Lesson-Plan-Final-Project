@@ -12,20 +12,25 @@ export const lesson04: Lesson = {
   ],
   duration: "55 minutes",
   materials: [
-    { name: "Code Sandbox Environment", type: "digital" },
+    { name: "Code Sandbox Environment", type: "digital", url: "https://codesandbox.io/" },
     { name: "Set of 5 numbered index cards (physical)", type: "physical" },
-    { name: "Dataset: Weekly Temperature Table", type: "digital" }
+    { name: "Teacher Laptop with Internet Access", type: "physical" },
+    { name: "Classroom Projector/Smartboard", type: "physical" },
+    { name: "Student Laptops/Chromebooks (1 per student)", type: "physical" }
   ],
   steps: [
     {
       title: "Hook: The Off-By-One Error",
       duration: "10 min",
       instructorScript:
-        "1. Display a picture of a parking lot with numbered spots 0, 1, 2, 3.\n"
-        + "2. Ask: 'If I park in the first spot, what is my spot number?' (Answer: 0).\n"
-        + "3. Say: 'Humans count 1, 2, 3. Computers count 0, 1, 2. This is called Zero-Indexing.'\n"
-        + "4. Write an array on board: SCORES = [90, 85, 100].\n"
-        + "5. Ask: 'What is SCORES[1]?' (Wait for students to say 90). Correct them: 'No, SCORES[0] is 90. SCORES[1] is 85.'",
+        "DO: Project an image of a parking lot with numbered spots 0, 1, 2, 3.\n\n"
+        + "SAY: 'If I park in the first spot, what is my spot number?' (Wait for answer: 0).\n"
+        + "SAY: 'Humans count 1, 2, 3. Computers count 0, 1, 2. This is called Zero-Indexing.'\n\n"
+        + "DO: Write on whiteboard: SCORES = [90, 85, 100].\n"
+        + "SAY: 'What is SCORES[1]?'\n"
+        + "DO: Wait for students to say 90. Then shake head.\n"
+        + "SAY: 'No, SCORES[0] is 90. SCORES[1] is 85.'\n"
+        + "CHECK: Ask a student to identify the value of SCORES[2]. (Answer: 100).",
       studentActivity:
         "Students participate in the rapid-fire Q&A, correcting their initial intuition to match the computer's logic.",
       interactiveComponent: "none",
@@ -36,12 +41,16 @@ export const lesson04: Lesson = {
       title: "Activity: The Human Loop",
       duration: "15 min",
       instructorScript:
-        "1. Call 5 students to the front. Give them cards with random numbers. Have them stand in a line.\n"
-        + "2. Say: 'I am the Loop Variable 'i'. I start at index 0.' Stand in front of the first student.\n"
-        + "3. Say: 'I am looking for the highest number. Current Max is 0.'\n"
-        + "4. Walk to student 0. Compare their card to Current Max. Update Max. Walk to student 1.\n"
-        + "5. Ask class: 'What do I do now?' (Compare and move).\n"
-        + "6. Repeat until the end. Explain that this physical walking is exactly what the 'FOR LOOP' does.",
+        "DO: Call 5 volunteers to the front of the room.\n"
+        + "DO: Hand each student a random numbered index card.\n"
+        + "DO: Line them up side-by-side facing the class.\n\n"
+        + "SAY: 'I am the Loop Variable 'i'. I start at index 0.' (Stand in front of the first student).\n"
+        + "SAY: 'I am looking for the highest number. Current Max is 0.'\n"
+        + "DO: Walk to student 0. Look at card. Compare to Max. Update Max if needed.\n"
+        + "DO: Take a visible step to student 1.\n\n"
+        + "SAY: 'Class, what do I do now?' (Expected: Compare and move).\n"
+        + "DO: Repeat until the end of the line.\n"
+        + "SAY: 'This physical walking is exactly what the 'FOR LOOP' does in the computer.'",
       studentActivity:
         "Selected students act as data points. The rest of the class directs the teacher's movement, verbalizing the comparison logic.",
       interactiveComponent: "none",
@@ -52,11 +61,13 @@ export const lesson04: Lesson = {
       title: "Collaborative Coding: The Weather Analyst",
       duration: "20 min",
       instructorScript:
-        "1. Pair students up. Open the Code Sandbox.\n"
-        + "2. Provide the dataset: 'temps = [72, 68, 75, 81, 69]'.\n"
-        + "3. Challenge: 'Write a loop that checks every number. If the number is above 80, print \"Heat Wave\".'\n"
-        + "4. Remind them to use the square brackets [i] to access the number.\n"
-        + "5. Walk around to support pairs. Ask: 'What is 'i' right now? What is 'temps[i]' right now?'",
+        "DO: Assign students into pairs.\n"
+        + "DO: Direct them to the Code Sandbox link.\n\n"
+        + "SAY: 'You have a dataset: temps = [72, 68, 75, 81, 69].'\n"
+        + "SAY: 'Challenge: Write a loop that checks every number. If the number is above 80, print \"Heat Wave\".'\n\n"
+        + "DO: Walk around the room.\n"
+        + "CHECK: Listen for students asking each other 'What is i right now?'\n"
+        + "CHECK: Ensure they are using square brackets [i] to access the number, not just using 'i'.",
       studentActivity:
         "Students work in pairs to write the pseudocode/code. Driver types, Navigator checks logic.",
       interactiveComponent: "sandbox",
@@ -70,9 +81,10 @@ export const lesson04: Lesson = {
       title: "Reflection: Debugging Thinking",
       duration: "10 min",
       instructorScript:
-        "1. Ask students to look at their code.\n"
-        + "2. Say: 'Did anyone make the mistake of using index 1 first? Or going past the end of the list?'\n"
-        + "3. Have students write a 2-sentence 'Note to Self' about how to avoid index errors in the future.",
+        "DO: Ask students to stop typing and look at their code.\n\n"
+        + "SAY: 'Did anyone make the mistake of using index 1 first? Or going past the end of the list?'\n"
+        + "SAY: 'I want you to write a 2-sentence 'Note to Self' about how to avoid index errors in the future.'\n\n"
+        + "DO: Collect the notes as an exit ticket.",
       studentActivity:
         "Students self-assess their code and write a strategy (e.g., 'Always start counting at 0').",
       interactiveComponent: "none",

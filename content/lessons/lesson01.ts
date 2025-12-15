@@ -12,9 +12,10 @@ export const lesson01: Lesson = {
   ],
   duration: "45 minutes",
   materials: [
-    { name: "Digital Whiteboard (Jamboard/Miro)", type: "digital" },
-    { name: "Virtual Sandwich Maker Simulator", type: "digital", url: "#sandbox" },
-    { name: "Slide Deck: Intro to Algorithms", type: "digital" }
+    { name: "Digital Whiteboard (Jamboard/Miro)", type: "digital", url: "https://miro.com"},
+    { name: "Teacher Laptop with Internet Access", type: "physical" },
+    { name: "Classroom Projector/Smartboard", type: "physical" },
+    { name: "Student Laptops/Chromebooks (1 per student)", type: "physical" }
   ],
   steps: [
     {
