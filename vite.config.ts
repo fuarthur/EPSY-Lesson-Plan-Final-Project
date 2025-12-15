@@ -2,9 +2,9 @@ import path from 'path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig(() => {
+export default defineConfig(({ mode }) => {
     return {
-        base: '/EPSY-Lesson-Plan-Final-Project/',
+        base: mode === 'production' ? '/EPSY-Lesson-Plan-Final-Project/' : '/',
 
         server: {
             port: 3000,
