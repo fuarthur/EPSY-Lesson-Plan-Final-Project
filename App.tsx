@@ -87,6 +87,9 @@ const Guide = () => (
 );
 
 const App: React.FC = () => {
+  // GitHub Pages deployment usually requires handling the subdirectory path
+  // However, HashRouter handles this automatically by using the hash portion of the URL.
+  // If we were using BrowserRouter, we would need basename="/EPSY-Lesson-Plan-Final-Project"
   return (
     <Router>
       <Layout>
